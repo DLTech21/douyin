@@ -1,4 +1,5 @@
-# -仿抖音android端
+# -仿抖音App
+
 体验地址：https://www.pgyer.com/fN5c
 
 ![avatar](https://www.pgyer.com/app/qrcode/fN5c)
