@@ -1,4 +1,4 @@
-# -仿抖音App
+# 仿抖音App
 
 体验地址：https://www.pgyer.com/fN5c
 
