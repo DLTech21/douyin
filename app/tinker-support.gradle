@@ -1,0 +1,23 @@
+apply plugin: 'com.tencent.bugly.tinker-support'
+def bakPath = file("${buildDir}/bakApk/")
+def baseApkDir = "app-0412-13-53-15"
+def gitVersionCode() {
+    def cmd = 'git rev-list HEAD --count'
+    cmd.execute().text.trim().toInteger()
+}
+tinkerSupport {
+    enable = true
+
+    tinkerEnable = true
+
+    autoBackupApkDir = "${bakPath}"
+    overrideTinkerPatchConfiguration = true
+    baseApk = "${bakPath}/${baseApkDir}/app-release.apk"
+    baseApkProguardMapping = "${bakPath}/${baseApkDir}/app-release-mapping.txt"
+    baseApkResourceMapping = "${bakPath}/${baseApkDir}/app-release-R.txt"
+    tinkerId = "douyin" + gitVersionCode()
+    buildAllFlavorsDir = "${bakPath}/${baseApkDir}"
+    isProtectedApp = true
+    enableProxyApplication = true
+
+}
